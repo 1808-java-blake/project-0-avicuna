@@ -149,4 +149,29 @@ public class UserSerializer implements UserDao {
 		return currentUser.getHistory();
 	}
 
+	@Override
+	public boolean findUsername(String username) {
+		// TODO Auto-generated method stub
+		try (ObjectInputStream ois = new ObjectInputStream(
+				new FileInputStream("src/main/resources/users/" + username + ".txt"))) {
+
+			currentUser = (User) ois.readObject(); // retrieve the user if it can
+			// verify that the password matches
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			return false;
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			return false;
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+
 }

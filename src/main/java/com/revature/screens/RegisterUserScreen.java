@@ -14,7 +14,13 @@ public class RegisterUserScreen implements Screen {
 	public Screen start() {
 		User u = new User();
 		System.out.println("Enter new username");
-		u.setUsername(scan.nextLine());
+		String username = scan.nextLine();
+		boolean choice = ud.findUsername(username);
+		if(choice) {
+			System.out.println("This username is already taken. Please try again.");
+			return new StartScreen();
+		}
+		u.setUsername(username);
 		System.out.println("Enter password");
 		u.setPassword(scan.nextLine());
 		System.out.println("Enter first name");

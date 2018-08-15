@@ -31,11 +31,9 @@ public class HomeScreen implements Screen {
 		case "2":
 			return new WithdrawScreen(current);
 		case "3":
-			System.out.println("\n" + "You're balance is " + current.getBalance());
-			break;
+			return new DisplayBalance(current);
 		case "4":
-			System.out.println(current.getHistory());
-			break;
+			return new DisplayHistory(current);
 		case "5":
 			System.out.println("You've been logged out");
 			return new StartScreen();

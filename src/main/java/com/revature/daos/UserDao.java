@@ -14,6 +14,7 @@ public static final UserDao currentUserDao = UserSerializer.us;
 	 */
 	boolean createUser(User u);
 	User findByUsernameAndPassword(String username, String password);
+	boolean findUsername(String username);
 	void depositYeet(double yeet);
 	void withdrawYeet(double yeet);
 	boolean addHistory(String newHistory);
