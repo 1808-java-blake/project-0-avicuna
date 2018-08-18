@@ -1,10 +1,12 @@
 package com.revature.daos;
 
+import java.util.ArrayList;
+
 import com.revature.beans.User;
 
 public interface UserDao {
 	
-public static final UserDao currentUserDao = UserSerializer.us;
+public static final UserDao currentUserDao = new UserDaoJdbc();
 	
 	/**
 	 * Takes in a user object and will persist that user
@@ -12,15 +14,16 @@ public static final UserDao currentUserDao = UserSerializer.us;
 	 * @param u
 	 * @return 
 	 */
-	boolean createUser(User u);
+	int createUser(User u);
 	User findByUsernameAndPassword(String username, String password);
 	boolean findUsername(String username);
-	void depositYeet(double yeet);
-	void withdrawYeet(double yeet);
-	boolean addHistory(String newHistory);
-	String getHistory();
-	double getBalance();
-	boolean updateUser(User u);
-	void deleteUser(User u);
+	void depositYeet(double balance, double yeet, String username);
+	void withdrawYeet(double balance, double yeet, String username);
+	boolean addDepositHistory(double amount, int userId);
+	boolean addWithdrawalHistory(double amount, int userId);
+	ArrayList<String> getHistory(int user_id);
+	double getBalance(String username);
+	void updateUser(String username);
+	//void deleteUser(User u);
 
 }

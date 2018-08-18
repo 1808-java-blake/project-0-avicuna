@@ -1,20 +1,17 @@
 package com.revature.beans;
 
-import java.io.Serializable;
+import java.util.ArrayList;
 
-public class User implements Serializable {
+public class User {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 2878891003003024330L;
 	
+	private int userId;
 	private String username;
 	private String password;
 	private String firstName;
 	private String lastName;
-	private String history = "";
-	private double balance;
+	private ArrayList<String> history = new ArrayList<String>();
+	private double balance = 0;
 	private int age;
 
 	public User() {
@@ -22,7 +19,7 @@ public class User implements Serializable {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(String username, String password, String firstName, String lastName, int age, double balance, String history) {
+	public User(String username, String password, String firstName, String lastName, int age, double balance, ArrayList<String> history) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -31,6 +28,14 @@ public class User implements Serializable {
 		this.age = age;
 		this.balance = balance;
 		this.history = history;
+	}
+	
+	public int getUserId() {
+		return userId;
+	}
+	
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
 
 	public String getUsername() {
@@ -81,21 +86,14 @@ public class User implements Serializable {
 		return this.balance;
 	}
 	
-	public void depositYeet(double yeet) {
-		this.balance += yeet;
-	}
-	
-	public void withdrawYeet(double yeet) {
-		this.balance -= yeet;
-	}
-	
-	public void addHistory(String newHistory) { 
-		this.history += newHistory;
-	}
-	
-	public String getHistory() {
+	public ArrayList<String> getHistory() {
 		return history;
 	}
+	
+	public void setHistory(ArrayList<String> history) {
+		this.history = history;
+	}
+	
 
 	@Override
 	public int hashCode() {
@@ -148,5 +146,6 @@ public class User implements Serializable {
 		return "User [username=" + username + ", password=" + password + ", firstName=" + firstName + ", lastName="
 				+ lastName + ", age=" + age + "]";
 	}
+
 
 }

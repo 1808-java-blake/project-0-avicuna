@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
+import com.revature.util.AppState;
+
 public class StartScreen implements Screen {
 	
 	private Scanner scan = new Scanner(System.in);

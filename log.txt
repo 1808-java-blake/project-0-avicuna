@@ -1,0 +1,300 @@
+2018-08-17 22:33:38 TRACE Launcher:13 - trace log
+2018-08-17 22:33:38 DEBUG Launcher:14 - debug log
+2018-08-17 22:33:38 INFO  Launcher:15 - info log
+2018-08-17 22:33:38 WARN  Launcher:16 - warn log
+2018-08-17 22:33:38 ERROR Launcher:17 - error log
+2018-08-17 22:33:38 FATAL Launcher:18 - fatal log
+2018-08-17 22:33:40 DEBUG StartScreen:17 - started login screen
+2018-08-17 22:33:48 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-17 22:33:49 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-17 22:33:50 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-17 22:33:50 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-17 22:33:59 DEBUG DepositScreen:23 - started deposit screen
+2018-08-17 22:34:47 TRACE Launcher:13 - trace log
+2018-08-17 22:34:47 DEBUG Launcher:14 - debug log
+2018-08-17 22:34:47 INFO  Launcher:15 - info log
+2018-08-17 22:34:47 WARN  Launcher:16 - warn log
+2018-08-17 22:34:47 ERROR Launcher:17 - error log
+2018-08-17 22:34:47 FATAL Launcher:18 - fatal log
+2018-08-17 22:34:49 DEBUG StartScreen:17 - started login screen
+2018-08-17 22:34:52 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-17 22:34:53 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-17 22:34:54 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-17 22:34:54 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-17 22:34:55 DEBUG DepositScreen:23 - started deposit screen
+2018-08-17 22:35:28 TRACE Launcher:13 - trace log
+2018-08-17 22:35:28 DEBUG Launcher:14 - debug log
+2018-08-17 22:35:28 INFO  Launcher:15 - info log
+2018-08-17 22:35:28 WARN  Launcher:16 - warn log
+2018-08-17 22:35:28 ERROR Launcher:17 - error log
+2018-08-17 22:35:28 FATAL Launcher:18 - fatal log
+2018-08-17 22:35:30 DEBUG StartScreen:17 - started login screen
+2018-08-17 22:35:37 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-17 22:35:38 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-17 22:35:39 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-17 22:35:39 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-17 22:35:40 DEBUG DepositScreen:23 - started deposit screen
+2018-08-17 22:36:33 TRACE Launcher:13 - trace log
+2018-08-17 22:36:33 DEBUG Launcher:14 - debug log
+2018-08-17 22:36:33 INFO  Launcher:15 - info log
+2018-08-17 22:36:33 WARN  Launcher:16 - warn log
+2018-08-17 22:36:33 ERROR Launcher:17 - error log
+2018-08-17 22:36:33 FATAL Launcher:18 - fatal log
+2018-08-17 22:36:35 DEBUG StartScreen:17 - started login screen
+2018-08-17 22:36:38 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-17 22:36:39 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-17 22:36:40 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-17 22:36:40 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-17 22:36:41 DEBUG DepositScreen:23 - started deposit screen
+2018-08-17 23:02:37 TRACE Launcher:13 - trace log
+2018-08-17 23:02:37 DEBUG Launcher:14 - debug log
+2018-08-17 23:02:37 INFO  Launcher:15 - info log
+2018-08-17 23:02:37 WARN  Launcher:16 - warn log
+2018-08-17 23:02:37 ERROR Launcher:17 - error log
+2018-08-17 23:02:37 FATAL Launcher:18 - fatal log
+2018-08-17 23:02:39 DEBUG StartScreen:17 - started login screen
+2018-08-17 23:02:45 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-17 23:02:47 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-17 23:02:48 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-17 23:02:48 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-17 23:03:08 DEBUG DepositScreen:25 - started deposit screen
+2018-08-17 23:05:21 TRACE Launcher:13 - trace log
+2018-08-17 23:05:21 DEBUG Launcher:14 - debug log
+2018-08-17 23:05:21 INFO  Launcher:15 - info log
+2018-08-17 23:05:21 WARN  Launcher:16 - warn log
+2018-08-17 23:05:21 ERROR Launcher:17 - error log
+2018-08-17 23:05:21 FATAL Launcher:18 - fatal log
+2018-08-17 23:05:23 DEBUG StartScreen:17 - started login screen
+2018-08-17 23:05:26 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-17 23:05:27 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-17 23:05:28 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-17 23:05:28 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-17 23:06:53 DEBUG DepositScreen:25 - started deposit screen
+2018-08-18 00:33:18 TRACE Launcher:13 - trace log
+2018-08-18 00:33:18 DEBUG Launcher:14 - debug log
+2018-08-18 00:33:18 INFO  Launcher:15 - info log
+2018-08-18 00:33:18 WARN  Launcher:16 - warn log
+2018-08-18 00:33:18 ERROR Launcher:17 - error log
+2018-08-18 00:33:18 FATAL Launcher:18 - fatal log
+2018-08-18 00:33:20 DEBUG StartScreen:17 - started login screen
+2018-08-18 00:33:24 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 00:33:25 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 00:33:26 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 00:33:26 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 00:41:10 TRACE Launcher:13 - trace log
+2018-08-18 00:41:10 DEBUG Launcher:14 - debug log
+2018-08-18 00:41:10 INFO  Launcher:15 - info log
+2018-08-18 00:41:10 WARN  Launcher:16 - warn log
+2018-08-18 00:41:10 ERROR Launcher:17 - error log
+2018-08-18 00:41:10 FATAL Launcher:18 - fatal log
+2018-08-18 00:41:12 DEBUG StartScreen:17 - started login screen
+2018-08-18 00:41:16 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 00:41:16 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 00:41:18 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 00:41:18 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 00:41:30 TRACE Launcher:13 - trace log
+2018-08-18 00:41:30 DEBUG Launcher:14 - debug log
+2018-08-18 00:41:30 INFO  Launcher:15 - info log
+2018-08-18 00:41:30 WARN  Launcher:16 - warn log
+2018-08-18 00:41:30 ERROR Launcher:17 - error log
+2018-08-18 00:41:30 FATAL Launcher:18 - fatal log
+2018-08-18 00:41:32 DEBUG StartScreen:17 - started login screen
+2018-08-18 00:41:36 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 00:41:37 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 00:41:38 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 00:41:38 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 00:41:58 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 00:42:00 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 00:42:22 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 00:42:24 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 00:42:53 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 00:44:55 TRACE Launcher:13 - trace log
+2018-08-18 00:44:55 DEBUG Launcher:14 - debug log
+2018-08-18 00:44:55 INFO  Launcher:15 - info log
+2018-08-18 00:44:55 WARN  Launcher:16 - warn log
+2018-08-18 00:44:55 ERROR Launcher:17 - error log
+2018-08-18 00:44:55 FATAL Launcher:18 - fatal log
+2018-08-18 00:44:57 DEBUG StartScreen:17 - started login screen
+2018-08-18 00:45:02 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 00:45:03 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 00:45:04 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 00:45:04 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 00:45:07 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 00:45:09 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 00:47:25 TRACE Launcher:13 - trace log
+2018-08-18 00:47:25 DEBUG Launcher:14 - debug log
+2018-08-18 00:47:25 INFO  Launcher:15 - info log
+2018-08-18 00:47:25 WARN  Launcher:16 - warn log
+2018-08-18 00:47:25 ERROR Launcher:17 - error log
+2018-08-18 00:47:25 FATAL Launcher:18 - fatal log
+2018-08-18 00:47:27 DEBUG StartScreen:17 - started login screen
+2018-08-18 00:47:31 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 00:47:32 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 00:47:33 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 00:47:33 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 00:47:35 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 00:47:38 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 00:50:01 TRACE Launcher:13 - trace log
+2018-08-18 00:50:01 DEBUG Launcher:14 - debug log
+2018-08-18 00:50:01 INFO  Launcher:15 - info log
+2018-08-18 00:50:01 WARN  Launcher:16 - warn log
+2018-08-18 00:50:01 ERROR Launcher:17 - error log
+2018-08-18 00:50:01 FATAL Launcher:18 - fatal log
+2018-08-18 00:50:03 DEBUG StartScreen:17 - started login screen
+2018-08-18 00:50:06 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 00:50:08 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 00:50:09 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 00:50:09 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 00:50:11 DEBUG DepositScreen:24 - started deposit screen
+2018-08-18 00:50:41 TRACE Launcher:13 - trace log
+2018-08-18 00:50:41 DEBUG Launcher:14 - debug log
+2018-08-18 00:50:41 INFO  Launcher:15 - info log
+2018-08-18 00:50:41 WARN  Launcher:16 - warn log
+2018-08-18 00:50:41 ERROR Launcher:17 - error log
+2018-08-18 00:50:41 FATAL Launcher:18 - fatal log
+2018-08-18 00:50:43 DEBUG StartScreen:17 - started login screen
+2018-08-18 00:50:46 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 00:50:48 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 00:50:49 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 00:50:49 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 00:50:51 DEBUG DepositScreen:24 - started deposit screen
+2018-08-18 00:55:40 TRACE Launcher:13 - trace log
+2018-08-18 00:55:40 DEBUG Launcher:14 - debug log
+2018-08-18 00:55:40 INFO  Launcher:15 - info log
+2018-08-18 00:55:40 WARN  Launcher:16 - warn log
+2018-08-18 00:55:40 ERROR Launcher:17 - error log
+2018-08-18 00:55:40 FATAL Launcher:18 - fatal log
+2018-08-18 00:55:42 DEBUG StartScreen:17 - started login screen
+2018-08-18 00:55:47 TRACE UserLoginScreen:22 - username = jjj
+2018-08-18 00:55:48 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 00:55:49 WARN  UserDaoJdbc:91 - failed to find user with provided credentials from the db
+2018-08-18 00:56:04 TRACE Launcher:13 - trace log
+2018-08-18 00:56:04 DEBUG Launcher:14 - debug log
+2018-08-18 00:56:04 INFO  Launcher:15 - info log
+2018-08-18 00:56:04 WARN  Launcher:16 - warn log
+2018-08-18 00:56:04 ERROR Launcher:17 - error log
+2018-08-18 00:56:04 FATAL Launcher:18 - fatal log
+2018-08-18 00:56:06 DEBUG StartScreen:17 - started login screen
+2018-08-18 00:56:19 TRACE UserDaoJdbc:47 - 1 records created
+2018-08-18 00:56:19 TRACE UserDaoJdbc:51 - generated user_id is2
+2018-08-18 00:56:22 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 00:56:23 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 00:56:24 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 00:56:24 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 00:56:43 DEBUG DepositScreen:24 - started deposit screen
+2018-08-18 00:56:56 DEBUG DepositScreen:24 - started deposit screen
+2018-08-18 00:57:51 DEBUG DepositScreen:24 - started deposit screen
+2018-08-18 00:58:03 DEBUG DepositScreen:24 - started deposit screen
+2018-08-18 01:00:17 TRACE Launcher:13 - trace log
+2018-08-18 01:00:17 DEBUG Launcher:14 - debug log
+2018-08-18 01:00:17 INFO  Launcher:15 - info log
+2018-08-18 01:00:17 WARN  Launcher:16 - warn log
+2018-08-18 01:00:17 ERROR Launcher:17 - error log
+2018-08-18 01:00:17 FATAL Launcher:18 - fatal log
+2018-08-18 01:00:19 DEBUG StartScreen:17 - started login screen
+2018-08-18 01:00:23 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 01:00:24 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 01:00:25 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 01:00:25 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 01:00:29 DEBUG DepositScreen:24 - started deposit screen
+2018-08-18 01:01:04 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 01:01:23 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 01:01:25 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 01:03:54 TRACE Launcher:13 - trace log
+2018-08-18 01:03:54 DEBUG Launcher:14 - debug log
+2018-08-18 01:03:54 INFO  Launcher:15 - info log
+2018-08-18 01:03:54 WARN  Launcher:16 - warn log
+2018-08-18 01:03:54 ERROR Launcher:17 - error log
+2018-08-18 01:03:54 FATAL Launcher:18 - fatal log
+2018-08-18 01:03:56 DEBUG StartScreen:17 - started login screen
+2018-08-18 01:03:59 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 01:04:00 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 01:04:02 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 01:04:02 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 01:04:08 DEBUG DepositScreen:24 - started deposit screen
+2018-08-18 01:04:26 DEBUG StartScreen:17 - started login screen
+2018-08-18 01:25:05 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 01:25:06 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 01:25:07 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 01:25:07 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 01:25:15 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 01:25:27 DEBUG StartScreen:17 - started login screen
+2018-08-18 01:25:27 DEBUG StartScreen:17 - started login screen
+2018-08-18 01:25:30 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 01:25:31 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 01:25:31 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 01:25:31 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 01:29:54 TRACE Launcher:13 - trace log
+2018-08-18 01:29:54 DEBUG Launcher:14 - debug log
+2018-08-18 01:29:54 INFO  Launcher:15 - info log
+2018-08-18 01:29:54 WARN  Launcher:16 - warn log
+2018-08-18 01:29:54 ERROR Launcher:17 - error log
+2018-08-18 01:29:54 FATAL Launcher:18 - fatal log
+2018-08-18 01:29:56 DEBUG StartScreen:17 - started login screen
+2018-08-18 01:30:00 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 01:30:01 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 01:30:02 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 01:30:02 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 01:30:06 DEBUG DepositScreen:24 - started deposit screen
+2018-08-18 01:32:20 TRACE Launcher:13 - trace log
+2018-08-18 01:32:20 DEBUG Launcher:14 - debug log
+2018-08-18 01:32:20 INFO  Launcher:15 - info log
+2018-08-18 01:32:20 WARN  Launcher:16 - warn log
+2018-08-18 01:32:20 ERROR Launcher:17 - error log
+2018-08-18 01:32:20 FATAL Launcher:18 - fatal log
+2018-08-18 01:32:22 DEBUG StartScreen:17 - started login screen
+2018-08-18 01:32:26 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 01:32:27 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 01:32:28 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 01:32:28 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 01:32:30 DEBUG DepositScreen:24 - started deposit screen
+2018-08-18 01:32:34 TRACE UserDaoJdbc:187 - 1 records created
+2018-08-18 01:32:34 TRACE UserDaoJdbc:191 - generated transaction_id is1
+2018-08-18 01:35:20 TRACE Launcher:13 - trace log
+2018-08-18 01:35:20 DEBUG Launcher:14 - debug log
+2018-08-18 01:35:20 INFO  Launcher:15 - info log
+2018-08-18 01:35:20 WARN  Launcher:16 - warn log
+2018-08-18 01:35:20 ERROR Launcher:17 - error log
+2018-08-18 01:35:20 FATAL Launcher:18 - fatal log
+2018-08-18 01:35:22 DEBUG StartScreen:17 - started login screen
+2018-08-18 01:35:25 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 01:35:26 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 01:35:28 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 01:35:28 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 01:35:41 DEBUG WithdrawScreen:22 - withdraw screen started
+2018-08-18 01:35:50 TRACE UserDaoJdbc:214 - 1 records created
+2018-08-18 01:35:50 TRACE UserDaoJdbc:218 - generated transaction_id is2
+2018-08-18 02:02:43 TRACE Launcher:13 - trace log
+2018-08-18 02:02:43 DEBUG Launcher:14 - debug log
+2018-08-18 02:02:43 INFO  Launcher:15 - info log
+2018-08-18 02:02:43 WARN  Launcher:16 - warn log
+2018-08-18 02:02:43 ERROR Launcher:17 - error log
+2018-08-18 02:02:43 FATAL Launcher:18 - fatal log
+2018-08-18 02:02:45 DEBUG StartScreen:17 - started login screen
+2018-08-18 02:02:50 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 02:02:51 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 02:02:53 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 02:02:53 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 02:06:47 TRACE Launcher:13 - trace log
+2018-08-18 02:06:47 DEBUG Launcher:14 - debug log
+2018-08-18 02:06:47 INFO  Launcher:15 - info log
+2018-08-18 02:06:47 WARN  Launcher:16 - warn log
+2018-08-18 02:06:47 ERROR Launcher:17 - error log
+2018-08-18 02:06:47 FATAL Launcher:18 - fatal log
+2018-08-18 02:06:49 DEBUG StartScreen:17 - started login screen
+2018-08-18 02:06:53 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 02:06:54 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 02:06:55 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 02:06:55 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 02:07:38 TRACE Launcher:13 - trace log
+2018-08-18 02:07:38 DEBUG Launcher:14 - debug log
+2018-08-18 02:07:38 INFO  Launcher:15 - info log
+2018-08-18 02:07:38 WARN  Launcher:16 - warn log
+2018-08-18 02:07:38 ERROR Launcher:17 - error log
+2018-08-18 02:07:38 FATAL Launcher:18 - fatal log
+2018-08-18 02:07:40 DEBUG StartScreen:17 - started login screen
+2018-08-18 02:07:44 TRACE UserLoginScreen:22 - username = avicuna
+2018-08-18 02:07:45 DEBUG UserLoginScreen:27 - received users credentials
+2018-08-18 02:07:46 INFO  UserLoginScreen:31 - user succefully logged in
+2018-08-18 02:07:46 INFO  UserLoginScreen:32 - welcomeUser [username=avicuna, password=null, firstName=Alex, lastName=Vicuna, age=22]
+2018-08-18 02:07:57 DEBUG StartScreen:17 - started login screen

@@ -4,22 +4,24 @@ import java.util.Scanner;
 
 import com.revature.beans.User;
 import com.revature.daos.UserDao;
+import com.revature.util.AppState;
 
 public class RegisterUserScreen implements Screen {
 
 	private Scanner scan = new Scanner(System.in);
 	private UserDao ud = UserDao.currentUserDao;
+	private AppState state = AppState.state;
 
 	@Override
 	public Screen start() {
 		User u = new User();
 		System.out.println("Enter new username");
 		String username = scan.nextLine();
-		boolean choice = ud.findUsername(username);
-		if(choice) {
-			System.out.println("This username is already taken. Please try again.");
-			return new StartScreen();
-		}
+//		boolean choice = ud.findUsername(username);
+//		if(choice) {
+//			System.out.println("This username is already taken. Please try again.");
+//			return new StartScreen();
+//		}
 		u.setUsername(username);
 		System.out.println("Enter password");
 		u.setPassword(scan.nextLine());

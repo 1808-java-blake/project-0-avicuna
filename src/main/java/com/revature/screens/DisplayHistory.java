@@ -1,27 +1,35 @@
 package com.revature.screens;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
 import com.revature.beans.User;
-import com.revature.daos.UserSerializer;
+import com.revature.daos.UserDao;
+import com.revature.util.AppState;
 
 public class DisplayHistory implements Screen {
-	private Scanner scan = new Scanner(System.in);
-	private User currentUser;
 	
-	public DisplayHistory(User currentUser) {
-		this.currentUser = currentUser;
-	}
+	private AppState state = AppState.state;
+	private User currentUser = state.getCurrentUser();
+	private Scanner scan = new Scanner(System.in);
+	private UserDao ud = UserDao.currentUserDao;
+	private Logger log = Logger.getRootLogger();
 
 	@Override
 	public Screen start() {
+		int userId = currentUser.getUserId();
 		System.out.println("Transaction History");
 		System.out.println("----------------------------------");
-		System.out.println(currentUser.getHistory() + "\n");
-		System.out.println("Enter 0 to exit.");
+		ArrayList<String> historyList = ud.getHistory(userId);
+		for(String h: historyList) {
+			System.out.println(h);
+		}
+		System.out.println("\nEnter 0 to exit.");
 		String selection = scan.nextLine();
 		if(selection.equals("0")) {
-			return new HomeScreen(currentUser);
+			return new HomeScreen();
 		}
 		System.out.println("Please press 0 to exit.");
 		return this;
