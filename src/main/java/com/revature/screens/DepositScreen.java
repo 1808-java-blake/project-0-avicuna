@@ -26,8 +26,7 @@ public class DepositScreen implements Screen {
 		double amount = scan.nextDouble();	
 		String username = currentUser.getUsername();
 		int userId = currentUser.getUserId();
-		double balance = ud.getBalance(username);
-		ud.depositYeet(balance, amount, username);
+		ud.depositYeet(amount, username);
 		ud.addDepositHistory(amount, userId);
 		return new HomeScreen();
 	}

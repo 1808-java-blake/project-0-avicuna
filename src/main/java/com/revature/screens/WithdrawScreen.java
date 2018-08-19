@@ -30,7 +30,7 @@ public class WithdrawScreen implements Screen {
 				System.out.println("Unable to withdraw this amount!");
 			}
 			else {
-				ud.withdrawYeet(balance, thisNum, username);
+				ud.withdrawYeet(thisNum, username);
 				ud.addWithdrawalHistory(thisNum, userId);
 				b = false;
 			}

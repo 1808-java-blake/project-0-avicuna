@@ -2,20 +2,9 @@ package com.revature.screens;
 
 import java.util.Scanner;
 
-import com.revature.beans.Admin;
-import com.revature.daos.AdminDao;
-
 public class AdminHomeScreen implements Screen {
-	private Admin current;
 	
 	private Scanner scan = new Scanner(System.in);
-	private AdminDao ad = AdminDao.currentAdminDao;
-
-	public AdminHomeScreen(Admin current) {
-		super();
-		this.current = current;
-	}
-
 
 
 	@Override
@@ -28,10 +17,9 @@ public class AdminHomeScreen implements Screen {
 		String selection = scan.nextLine();
 		switch (selection) {
 		case "1":
-			ad.viewAllUsers();
-			break;
+			return new ViewAllUsers();
 		case "2":
-			return new ViewUserHistory(current);
+			return new ViewUserHistory();
 		case "3":
 			System.out.println("You've been logged out.");
 			return new StartScreen();

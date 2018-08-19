@@ -1,7 +1,5 @@
 package com.revature.daos;
 
-import java.awt.List;
-import java.sql.Array;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,7 +9,6 @@ import java.util.ArrayList;
 import org.apache.log4j.Logger;
 
 import com.revature.beans.User;
-import com.revature.util.AppState;
 import com.revature.util.ConnectionUtil;
 
 public class UserDaoJdbc implements UserDao {
@@ -23,26 +20,22 @@ public class UserDaoJdbc implements UserDao {
 		try {
 			Class.forName("org.postgresql.Driver");
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-}
+	}
 
 	@Override
 	public int createUser(User u) {
 		try (Connection conn = cu.getConnection()) {
 			PreparedStatement ps = conn.prepareStatement(
-					"INSERT INTO users (username, pass, age, firstname, lastname, history, balance) VALUES (?,?,?,?,?,?,?)",
+					"INSERT INTO users (username, pass, age, firstname, lastname, balance) VALUES (?,?,?,?,?,?)",
 					new String[] {"user_id"});
 			ps.setString(1, u.getUsername());
 			ps.setString(2, u.getPassword());
 			ps.setInt(3, u.getAge());
 			ps.setString(4, u.getFirstName());
 			ps.setString(5, u.getLastName());
-			String[] noHistory = new String[] {};
-			Array sqlArray = conn.createArrayOf("CHAR", noHistory);
-			ps.setArray(6, sqlArray);
-			ps.setFloat(7, 0);
+			ps.setFloat(6, 0);
 			int recordsCreated = ps.executeUpdate();
 			log.trace(recordsCreated + " records created");
 			
@@ -53,7 +46,6 @@ public class UserDaoJdbc implements UserDao {
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			log.error(e.getMessage());
 			for(StackTraceElement ste: e.getStackTrace()) {
 				log.error(ste);
@@ -66,12 +58,6 @@ public class UserDaoJdbc implements UserDao {
 	@Override
 	public User findByUsernameAndPassword(String username, String password) {
 		try (Connection conn = cu.getConnection()) {
-			// don't do this
-//			Statement s = conn.createStatement();
-//			ResultSet rs = s.executeQuery("SELECT * FROM app_users WHERE username='" + 
-//							username + "' AND pass='" + password + "'");
-			
-			// do this
 			PreparedStatement ps = conn.prepareStatement(
 					"SELECT * FROM users WHERE username=? and pass=?");
 			ps.setString(1, username);
@@ -93,7 +79,6 @@ public class UserDaoJdbc implements UserDao {
 			}
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
@@ -101,41 +86,25 @@ public class UserDaoJdbc implements UserDao {
 
 	@Override
 	public boolean findUsername(String username) {
-//		try (Connection conn = cu.getConnection()) {
-//			// don't do this
-////			Statement s = conn.createStatement();
-////			ResultSet rs = s.executeQuery("SELECT * FROM app_users WHERE username='" + 
-////							username + "' AND pass='" + password + "'");
-//			
-//			// do this
-//			PreparedStatement ps = conn.prepareStatement(
-//					"SELECT * FROM app_users WHERE username=? and pass=?");
-//			ps.setString(1, username);
-//			ResultSet rs = ps.executeQuery();
-//					
-//			if(rs.next()) {
-//				User u = new User();
-//				u.setAge(rs.getInt("age"));
-//				u.setFirstName(rs.getString("firstname"));
-//				u.setLastName(rs.getString("lastname"));
-//				u.setUsername(rs.getString("username"));
-//				u.setUserId(rs.getInt("user_id"));
-//				return u;
-//			} else {
-//				log.warn("failed to find user with provided credentials from the db");
-//				return null;
-//			}
-//
-//		} catch (SQLException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		return null;
+		try (Connection conn = cu.getConnection()) {
+			PreparedStatement ps = conn.prepareStatement(
+					"SELECT * FROM users WHERE username=?");
+			ps.setString(1, username);
+			ResultSet rs = ps.executeQuery();
+			if(rs.next()) {
+				log.warn("the username is already in use.");
+				return true;
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		return false;
 	}
 
 	@Override
-	public void depositYeet(double balance, double yeet, String username) {
+	public void depositYeet(double yeet, String username) {
+		double balance = getBalance(username);
 		try (Connection conn = cu.getConnection()) {
 			PreparedStatement ps = conn.prepareStatement(
 					"UPDATE users SET balance=? WHERE username=?");
@@ -144,17 +113,17 @@ public class UserDaoJdbc implements UserDao {
 			
 			ps.setDouble(1, balance);
 			ps.setString(2, username);
-			int recordsCreated = ps.executeUpdate();
+			ps.executeUpdate();
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.out.println("Failure");
 		}
 	}
 
 	@Override
-	public void withdrawYeet(double balance, double yeet, String username) {
+	public void withdrawYeet(double yeet, String username) {
+		double balance = getBalance(username);
 		try (Connection conn = cu.getConnection()) {
 			PreparedStatement ps = conn.prepareStatement(
 					"UPDATE users SET balance=? WHERE username=?");
@@ -163,14 +132,23 @@ public class UserDaoJdbc implements UserDao {
 			
 			ps.setDouble(1, balance);
 			ps.setString(2, username);
-			int recordsCreated = ps.executeUpdate();
+			ps.executeUpdate();
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.out.println("Failure");
 		}
 
+	}
+	
+	@Override
+	public boolean wireTransfer(double amount, String username, String recipientUsername) {
+		if(!findUsername(recipientUsername)) {
+			return false;
+		}
+		depositYeet(amount, recipientUsername);
+		withdrawYeet(amount, username);
+		return true;
 	}
 
 	@Override
@@ -191,7 +169,6 @@ public class UserDaoJdbc implements UserDao {
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			log.error(e.getMessage());
 			for(StackTraceElement ste: e.getStackTrace()) {
 				log.error(ste);
@@ -219,12 +196,46 @@ public class UserDaoJdbc implements UserDao {
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			log.error(e.getMessage());
 			for(StackTraceElement ste: e.getStackTrace()) {
 				log.error(ste);
 			}
-			log.warn("failed to create new user");
+			log.warn("failed to create transaction history");
+			return false;
+			}
+		return true;
+	}
+	@Override
+	public boolean addWireTransferHistory(double amount, String username) {
+		int userId = 0;
+		try (Connection conn = cu.getConnection()) {
+			PreparedStatement ps1 = conn.prepareStatement(
+					"SELECT user_id FROM users WHERE username=?");
+			ps1.setString(1, username);
+			ResultSet rs1 = ps1.executeQuery();
+			if(rs1.next()) {
+				userId = rs1.getInt("user_id");
+			}
+			PreparedStatement ps2 = conn.prepareStatement(
+					"INSERT INTO transactions (transaction_type, transaction_amount, user_id) VALUES (?,?,?)",
+					new String[] {"transaction_id"});
+			ps2.setString(1, "Wire Transfer");
+			ps2.setDouble(2, amount);
+			ps2.setInt(3, userId);
+			int recordsCreated = ps2.executeUpdate();
+			log.trace(recordsCreated + " records created");
+			
+			ResultSet rs2 = ps2.getGeneratedKeys();
+			if(rs2.next()) {
+				log.trace("generated transaction_id is" + rs2.getInt("transaction_id"));
+			}
+			
+		} catch (SQLException e) {
+			log.error(e.getMessage());
+			for(StackTraceElement ste: e.getStackTrace()) {
+				log.error(ste);
+			}
+			log.warn("failed to create transaction history");
 			return false;
 			}
 		return true;
@@ -244,16 +255,18 @@ public class UserDaoJdbc implements UserDao {
 				if(rs.getString("transaction_type").equals("Deposit")) {
 					history = "Deposit: " + rs.getDouble("transaction_amount");
 				}
-				else {
+				else if(rs.getString("transaction_type").equals("Withdrawal")){
 					history = "Withdrawal: " + rs.getDouble("transaction_amount");
 				}
+				else
+					history = "Wire Transfer: " + rs.getDouble("transaction_amount");
+				
 				historyList.add(history);
 			}
 			
 			return historyList;
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			log.error(e.getMessage());
 			for(StackTraceElement ste: e.getStackTrace()) {
 				log.error(ste);
@@ -265,7 +278,6 @@ public class UserDaoJdbc implements UserDao {
 
 	@Override
 	public double getBalance(String username) {
-		// TODO Auto-generated method stub
 		try (Connection conn = cu.getConnection()) {
 			PreparedStatement ps = conn.prepareStatement(
 					"SELECT balance FROM users WHERE username=?");
@@ -278,16 +290,11 @@ public class UserDaoJdbc implements UserDao {
 			}
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return 0;
 	}
 
-	@Override
-	public void updateUser(String username) {
-		// TODO Auto-generated method stub
-		
-	}
+
 
 }

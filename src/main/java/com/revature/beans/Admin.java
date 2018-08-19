@@ -1,13 +1,9 @@
 package com.revature.beans;
 
-import java.io.Serializable;
 
-public class Admin implements Serializable {
-	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 7242476113206885606L;
+public class Admin {
+
+	private int adminId;
 	private String username;
 	private String password;
 	private String firstName;
@@ -23,6 +19,15 @@ public class Admin implements Serializable {
 		this.firstName = firstName;
 		this.lastName = lastName;
 	}
+	
+	public int getAdminId() {
+		return adminId;
+	}
+	
+	public void setAdminId(int adminId) {
+		this.adminId = adminId;
+	}
+	
 	public String getUsername() {
 		return username;
 	}

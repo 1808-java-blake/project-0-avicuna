@@ -17,13 +17,12 @@ public static final UserDao currentUserDao = new UserDaoJdbc();
 	int createUser(User u);
 	User findByUsernameAndPassword(String username, String password);
 	boolean findUsername(String username);
-	void depositYeet(double balance, double yeet, String username);
-	void withdrawYeet(double balance, double yeet, String username);
+	void depositYeet(double yeet, String username);
+	void withdrawYeet(double yeet, String username);
+	boolean wireTransfer(double amount, String username, String recipientUsername);
 	boolean addDepositHistory(double amount, int userId);
 	boolean addWithdrawalHistory(double amount, int userId);
+	boolean addWireTransferHistory(double amount, String username);
 	ArrayList<String> getHistory(int user_id);
 	double getBalance(String username);
-	void updateUser(String username);
-	//void deleteUser(User u);
-
 }

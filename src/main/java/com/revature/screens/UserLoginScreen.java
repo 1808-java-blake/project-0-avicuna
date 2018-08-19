@@ -33,7 +33,7 @@ public class UserLoginScreen implements Screen {
 			return new HomeScreen();
 		}
 
-		System.out.println("unable to login");
+		System.out.println("Unable to login. Please try again.");
 		return this;
 	}
 
