@@ -18,8 +18,9 @@ public class ViewAllUsers implements Screen {
 		System.out.println("Users");
 		System.out.println("---------------------------------------------------\n");
 		userList = ad.viewAllUsers();
-		for(User h: userList) {
-			System.out.println(h);
+		for(User u: userList) {
+			System.out.println("User ID: " + u.getUserId() + " | Username: "+ u.getUsername() + ", First Name: " + u.getFirstName()
+			+ ", Last Name: " + u.getLastName() + ", Age: " + u.getAge());
 		}
 		System.out.println("\nEnter 0 to exit.");
 		String selection = scan.nextLine();

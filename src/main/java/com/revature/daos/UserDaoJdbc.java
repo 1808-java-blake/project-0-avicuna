@@ -181,11 +181,9 @@ public class UserDaoJdbc implements UserDao {
 		int userID = -1;
 		if (accountType.equals("checking")) {
 			balance = getCheckingBalance(username);
-			System.out.println("Checking balance: " + balance);
 		}
 		else if (accountType.equals("savings")) {
 			balance = getSavingsBalance(username);
-			System.out.println("Savings balance: " + balance);
 		}
 		
 		try (Connection conn = cu.getConnection()) {
@@ -195,7 +193,6 @@ public class UserDaoJdbc implements UserDao {
 			ResultSet rs0 = ps0.executeQuery();
 			if(rs0.next()) {
 				userID = rs0.getInt("user_id");
-				System.out.println("Here's my user_id: " + userID);
 			}
 			PreparedStatement ps = conn.prepareStatement(	
 					"UPDATE accounts SET balance=? WHERE user_id=? AND account_type=?");
@@ -206,7 +203,6 @@ public class UserDaoJdbc implements UserDao {
 			ps.setInt(2, userID);
 			ps.setString(3, accountType);
 			ps.executeUpdate();
-			System.out.println("My user ID: " + userID);
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -224,6 +220,7 @@ public class UserDaoJdbc implements UserDao {
 		else if (accountType.equals("savings")) {
 			balance = getSavingsBalance(username);
 		}
+		
 		try (Connection conn = cu.getConnection()) {
 			PreparedStatement ps0 = conn.prepareStatement(
 					"SELECT user_id FROM users WHERE username=?");
@@ -232,6 +229,7 @@ public class UserDaoJdbc implements UserDao {
 			if(rs0.next()) {
 				userID = rs0.getInt("user_id");
 			}
+			
 			PreparedStatement ps = conn.prepareStatement (
 					"UPDATE accounts SET balance=? WHERE user_id=? AND account_type=?");
 			
@@ -254,15 +252,15 @@ public class UserDaoJdbc implements UserDao {
 		if(!findUsername(recipientUsername)) {
 			return false;
 		}
-		depositYeet(amount, accountType, recipientUsername);
-		withdrawYeet(amount, accountType, username);
+		withdrawYeet(amount, username, accountType);
+		depositYeet(amount, recipientUsername, accountType);
 		return true;
 	}
 
 	@Override
 	public boolean addDepositHistory(double amount, int userId) { 
 		try (Connection conn = cu.getConnection()) {
-			PreparedStatement ps = conn.prepareStatement(	//GOING TO ADD COLUMN NAME ACCOUNT TYPE
+			PreparedStatement ps = conn.prepareStatement(	
 					"INSERT INTO transactions (transaction_type, transaction_amount, user_id) VALUES (?,?,?)",
 					new String[] {"transaction_id"});
 			ps.setString(1, "Deposit");
@@ -289,7 +287,7 @@ public class UserDaoJdbc implements UserDao {
 	
 	public boolean addWithdrawalHistory(double amount, int userId) {
 		try (Connection conn = cu.getConnection()) {
-			PreparedStatement ps = conn.prepareStatement(	//GOING TO ADD COLUMN NAME ACCOUNT TYPE
+			PreparedStatement ps = conn.prepareStatement(	
 					"INSERT INTO transactions (transaction_type, transaction_amount, user_id) VALUES (?,?,?)",
 					new String[] {"transaction_id"});
 			ps.setString(1, "Withdrawal");
@@ -324,7 +322,7 @@ public class UserDaoJdbc implements UserDao {
 			if(rs1.next()) {
 				userId = rs1.getInt("user_id");
 			}
-			PreparedStatement ps2 = conn.prepareStatement(	//GOING TO ADD COLUMN NAME ACCOUNT TYPE 
+			PreparedStatement ps2 = conn.prepareStatement(	 
 					"INSERT INTO transactions (transaction_type, transaction_amount, user_id) VALUES (?,?,?)",
 					new String[] {"transaction_id"});
 			ps2.setString(1, "Wire Transfer");
@@ -359,7 +357,7 @@ public class UserDaoJdbc implements UserDao {
 			ps.setInt(1, userId);
 			ResultSet rs = ps.executeQuery();
 		
-			while(rs.next()) {	//GOING TO ADD THE ACCOUNT TYPE 
+			while(rs.next()) {	
 				if(rs.getString("transaction_type").equals("Deposit")) {
 					history = "Deposit: " + rs.getDouble("transaction_amount");
 				}

@@ -53,7 +53,7 @@ public class AdminDaoJdbc implements AdminDao {
 	}
 
 	@Override
-	public ArrayList<User> viewAllUsers() { //Refactor this to account for users table not having balance anymore
+	public ArrayList<User> viewAllUsers() { 
 		ArrayList<User> listUsers = new ArrayList<User>();
 		try (Connection conn = cu.getConnection()) {
 			PreparedStatement ps = conn.prepareStatement(
@@ -61,13 +61,13 @@ public class AdminDaoJdbc implements AdminDao {
 			ResultSet rs = ps.executeQuery();
 					
 			while(rs.next()) {
-				User u = new User(); // Transaction t = new Transaction();
-				u.setAge(rs.getInt("age"));	// t.setBalance(rs.getDouble("balance"));
+				User u = new User();
+				u.setAge(rs.getInt("age"));	
 				u.setFirstName(rs.getString("firstname"));
 				u.setLastName(rs.getString("lastname"));
 				u.setUsername(rs.getString("username"));
 				u.setUserId(rs.getInt("user_id"));
-				u.setBalance(rs.getDouble("balance"));
+//				u.setBalance(rs.getDouble("balance"));
 				listUsers.add(u);
 			} 
 
@@ -92,7 +92,6 @@ public class AdminDaoJdbc implements AdminDao {
 					thisUserId = rs.getInt("user_id");
 				}
 			} 
-			log.info("The user Id that was saved is: " + thisUserId);
 			PreparedStatement ps2 = conn.prepareStatement(
 					"SELECT * FROM transactions WHERE user_id=?");
 			ps2.setInt(1, thisUserId);
@@ -102,8 +101,11 @@ public class AdminDaoJdbc implements AdminDao {
 				if(rs2.getString("transaction_type").equals("Deposit")) {
 					history = "Deposit: " + rs2.getDouble("transaction_amount");
 				}
-				else {
+				else if (rs2.getString("transaction_type").equals("Withdrawal")) {
 					history = "Withdrawal: " + rs2.getDouble("transaction_amount");
+				}
+				else {
+					history = "Wire Transfer: " + rs2.getDouble("transaction_amount");
 				}
 				historyList.add(history);
 			}

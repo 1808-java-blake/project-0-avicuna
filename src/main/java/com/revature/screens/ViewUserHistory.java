@@ -15,7 +15,6 @@ public class ViewUserHistory implements Screen {
 	public Screen start() {
 		// TODO Auto-generated method stub
 		System.out.println("Please enter the user's username to view their transaction history: ");
-		System.out.println("Enter 0 if you would like to exit.");
 		String username = scan.nextLine();
 		userHistory = ad.viewUserTransactionHistory(username);
 		if(username.equals("0")) {

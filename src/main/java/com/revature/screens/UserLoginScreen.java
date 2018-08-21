@@ -34,7 +34,7 @@ public class UserLoginScreen implements Screen {
 		}
 
 		System.out.println("Unable to login. Please try again.");
-		return this;
+		return new StartScreen();
 	}
 
 }
