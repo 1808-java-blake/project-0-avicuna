@@ -22,11 +22,13 @@ public class DepositScreen implements Screen {
 	public Screen start() {
 
 		log.debug("started deposit screen");
+		System.out.println("Which account would you like to deposit into?: ");
+		String account = scan.nextLine().toLowerCase();
 		System.out.println("How much YeetCoin would you like to deposit?: ");
 		double amount = scan.nextDouble();	
 		String username = currentUser.getUsername();
 		int userId = currentUser.getUserId();
-		ud.depositYeet(amount, username);
+		ud.depositYeet(amount, username, account);
 		ud.addDepositHistory(amount, userId);
 		return new HomeScreen();
 	}

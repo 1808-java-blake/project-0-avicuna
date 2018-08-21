@@ -53,7 +53,7 @@ public class AdminDaoJdbc implements AdminDao {
 	}
 
 	@Override
-	public ArrayList<User> viewAllUsers() {
+	public ArrayList<User> viewAllUsers() { //Refactor this to account for users table not having balance anymore
 		ArrayList<User> listUsers = new ArrayList<User>();
 		try (Connection conn = cu.getConnection()) {
 			PreparedStatement ps = conn.prepareStatement(
@@ -61,8 +61,8 @@ public class AdminDaoJdbc implements AdminDao {
 			ResultSet rs = ps.executeQuery();
 					
 			while(rs.next()) {
-				User u = new User();
-				u.setAge(rs.getInt("age"));
+				User u = new User(); // Transaction t = new Transaction();
+				u.setAge(rs.getInt("age"));	// t.setBalance(rs.getDouble("balance"));
 				u.setFirstName(rs.getString("firstname"));
 				u.setLastName(rs.getString("lastname"));
 				u.setUsername(rs.getString("username"));

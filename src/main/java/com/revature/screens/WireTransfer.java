@@ -23,11 +23,13 @@ public class WireTransfer implements Screen {
 			System.out.println("This username does not exist, please try again.");
 			return this;
 		}
+		System.out.println("Which account do you want to transfer from?: ");
+		String account = scan.nextLine().toLowerCase();
 		System.out.println("What is the amount that you would like to transfer?: ");
 		double amount = scan.nextDouble();
-		ud.wireTransfer(amount, username, recipientUsername);
+		ud.wireTransfer(amount, username, account, recipientUsername);
 		ud.addWireTransferHistory(amount, username);
-		//System.out.println("Transfer was successful!");
+		System.out.println("Transfer successful!");
 		return new HomeScreen();
 	}
 

@@ -18,7 +18,8 @@ public class DisplayBalance implements Screen {
 		String username = currentUser.getUsername();
 		System.out.println("Current Balance");
 		System.out.println("--------------------------");
-		System.out.println(ud.getBalance(username) + "\n");
+		System.out.println("Checking: " + ud.getCheckingBalance(username));
+		System.out.println("Savings: " + ud.getSavingsBalance(username) + "\n");
 		System.out.println("Enter 0 to exit.");
 		String selection = scan.nextLine();
 		if(selection.equals("0")) {
